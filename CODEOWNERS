@@ -1,12 +1,28 @@
 * @documentdb/documentdb-maintainers
 
-/.pipelines/ @safern @visridha @shuaitian-git @lichoil @xgerman
-/.github/workflows/ @safern @visridha @shuaitian-git @lichoil @xgerman
-/packaging/ @safern @visridha @shuaitian-git @lichoil @fatmelon @xgerman
+# === RFCs / Architectural Proposals ===
+/rfcs/ @normtown @abinavrameesh @visridha @safern @tsharp
 
+# === Build and Packaging ===
+/.pipelines/ @documentdb/build-infra
+/.github/workflows/ @documentdb/build-infra
+/packaging/ @documentdb/release-managers
+/scripts/ @documentdb/documentdb-maintainers @documentdb/gateway
+Make* @documentdb/build-infra @documentdb/documentdb-maintainers @documentdb/gateway
+
+# === Error Definitions ===
+error_mappings.csv @documentdb/documentdb-maintainers @documentdb/gateway
+documentdb_errors.csv @documentdb/documentdb-maintainers @documentdb/gateway
+
+# === Engine ===
 *.csv @documentdb/documentdb-maintainers
 *.sql @documentdb/documentdb-maintainers
-Make* @documentdb/documentdb-maintainers
 /internal/ @documentdb/documentdb-maintainers
 /pg_documentdb/ @documentdb/documentdb-maintainers
 /pg_documentdb_core/ @documentdb/documentdb-maintainers
+/pg_documentdb_extended_rum/ @documentdb/documentdb-maintainers
+
+# === Gateway  (Rust) ===
+/pg_documentdb_gw/ @documentdb/gateway
+/pg_documentdb_gw_host/ @documentdb/gateway
+/rust-toolchain.toml @documentdb/gateway
